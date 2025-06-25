@@ -1,7 +1,4 @@
-const http= require('http');
-let product=[
-    {id:1 , name :'chair'},
-    {id:1 , name :'chair'},
-];
-const server= http.createServer((req,res)=>
-);
+const fs = require('fs')
+
+const content = fs.readFileSync('./app.js', 'utf-8')
+console.log(content);
