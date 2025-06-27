@@ -1,4 +1,8 @@
-const fs = require('fs')
+const fs= require('fs');
 
-const content = fs.readFileSync('./app.js', 'utf-8')
-console.log(content);
+for(let i=0 ; i<=10 ; i++){
+    const filename = `file${i}.txt`;
+    const content=`this is file number ${i}`
+    fs.writeFileSync(filename,content);
+}
+console.log("created");
