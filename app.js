@@ -42,35 +42,35 @@ server.listen(port, (error) => {
 
 ///////////////////////////////////////////////////////////////////////////////////////////////
 
-// // Step 1: Import the 'http' module which helps us create a web server
-// const http = require('http');
+// Step 1: Import the 'http' module which helps us create a web server
+const http = require('http');
 
-// // Step 2: Set the port number where our server will run
-// const port = 4000;
+// Step 2: Set the port number where our server will run
+const port = 4000;
 
-// // Step 3: Create the server using http.createServer
-// // This function runs every time someone makes a request to our server
-// const server = http.createServer((req, res) => {
-//   // req.url gives us the path the user is trying to access (like / or /contact)
+// Step 3: Create the server using http.createServer
+// This function runs every time someone makes a request to our server
+const server = http.createServer((req, res) => {
+  // req.url gives us the path the user is trying to access (like / or /contact)
 
-//   if (req.url === '/') {
-//     res.write('man'); // If user is at home page (/), send "man"
-//   } else if (req.url === '/contact') {
-//     res.write('contact'); // If user visits /contact, send "contact"
-//   } else {
-//     res.write('404 Not Found'); // Optional: handle other paths
-//   }
+  if (req.url === '/') {
+    res.write('man'); // If user is at home page (/), send "man"
+  } else if (req.url === '/contact') {
+    res.write('contact'); // If user visits /contact, send "contact"
+  } else {
+    res.write('404 Not Found'); // Optional: handle other paths
+  }
 
-//   res.end(); // End the response (you must call this to send the final response)
-// });
+  res.end(); // End the response (you must call this to send the final response)
+});
 
-// // Step 4: Start the server and listen on the defined port
-// server.listen(port, (error) => {
-//   // If something goes wrong while starting the server
-//   if (error) {
-//     console.log('Something went wrong:', error); // Print error
-//   } else {
-//     // If everything is okay, show that server is running
-//     console.log('Server is running on http://localhost:' + port);
-//   }
-// });
+// Step 4: Start the server and listen on the defined port
+server.listen(port, (error) => {
+  // If something goes wrong while starting the server
+  if (error) {
+    console.log('Something went wrong:', error); // Print error
+  } else {
+    // If everything is okay, show that server is running
+    console.log('Server is running on http://localhost:' + port);
+  }
+});
