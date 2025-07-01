@@ -57,9 +57,7 @@ const server = http.createServer((req, res) => {
     res.write('man'); // If user is at home page (/), send "man"
   } else if (req.url === '/contact') {
     res.write('contact'); // If user visits /contact, send "contact"
-  } else {
-    res.write('404 Not Found'); // Optional: handle other paths
-  }
+  } 
 
   res.end(); // End the response (you must call this to send the final response)
 });
