@@ -10,9 +10,15 @@
 
 
 
-const fs = require('fs');
+// const fs = require('fs');
 
-for (let i = 1; i <= 10; i++) {
-  fs.unlinkSync(`file${i}.txt`);
-  console.log(`Deleted file${i}.txt`);
-}
+// for (let i = 1; i <= 10; i++) {
+//   fs.unlinkSync(`file${i}.txt`);
+//   console.log(`Deleted file${i}.txt`);
+// }
+
+const http = require('http');
+const port =5000;
+const server = http.createServer((req,res)=>{
+  
+})
