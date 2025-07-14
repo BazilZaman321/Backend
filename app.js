@@ -3,36 +3,36 @@
 
 
 
-// 1️⃣ Import the built-in 'http' module which helps us create a web server
-const http = require('http');
+// // 1️⃣ Import the built-in 'http' module which helps us create a web server
+// const http = require('http');
 
-// 2️⃣ Set a port number where the server will listen (4000 in this case)
-const port = 4000;
+// // 2️⃣ Set a port number where the server will listen (4000 in this case)
+// const port = 4000;
 
-// 3️⃣ Create the server using http.createServer()
-// This function runs whenever a user makes a request to the server
-const server = http.createServer((req, res) => {
+// // 3️⃣ Create the server using http.createServer()
+// // This function runs whenever a user makes a request to the server
+// const server = http.createServer((req, res) => {
   
-  // 4️⃣ res.write() is used to send data back to the browser
-  res.write('Welcome to my simple Node.js server!');
+//   // 4️⃣ res.write() is used to send data back to the browser
+//   res.write('Welcome to my simple Node.js server!');
 
-  // 5️⃣ res.end() is used to tell Node.js that the response is complete
-  res.end();
-});
+//   // 5️⃣ res.end() is used to tell Node.js that the response is complete
+//   res.end();
+// });
 
-// 6️⃣ server.listen() starts the server and tells it to listen on the given port
-// It also has a callback function that runs when the server starts successfully
-server.listen(port, (error) => {
+// // 6️⃣ server.listen() starts the server and tells it to listen on the given port
+// // It also has a callback function that runs when the server starts successfully
+// server.listen(port, (error) => {
 
-  // 7️⃣ If there’s an error while starting the server, log it
-  if (error) {
-    console.log('Something went wrong:', error);
-  } 
-  // 8️⃣ Otherwise, log that the server is running successfully
-  else {
-    console.log(`Server is running at http://localhost:${port}`);
-  }
-});
+//   // 7️⃣ If there’s an error while starting the server, log it
+//   if (error) {
+//     console.log('Something went wrong:', error);
+//   } 
+//   // 8️⃣ Otherwise, log that the server is running successfully
+//   else {
+//     console.log(`Server is running at http://localhost:${port}`);
+//   }
+// });
 
 
 
