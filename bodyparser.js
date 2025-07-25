@@ -13,6 +13,6 @@ app.post('/submit',(req,res)=>{
 
 
 app.listen(3000,()=>{
-    console.log("good");
-    
-})
+  console.log("good ");
+  
+});
